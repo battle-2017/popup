@@ -11,7 +11,7 @@ chatBox($);
 })(jQuery);
 
 function detectMessage($){
-	if($('.unred').length > 0){
+	if($('.recieved').length > 0){
 		msgInput = 1;
 	}
 }

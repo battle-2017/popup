@@ -11,49 +11,36 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-<script>
-  window.fbAsyncInit = function() {
+<script type="text/javascript">
+window.fbAsyncInit = function() {
     FB.init({
       appId      : '288441184978256',
       xfbml      : true,
       version    : 'v2.6'
     });
 
-    FB.Event.subscribe('messenger_checkbox', function(e) {
-      console.log("messenger_checkbox event");
+    FB.Event.subscribe('send_to_messenger', function(e) {
+      console.log("send_to_messenger event");
       console.log(e);
-      
-      if (e.event == 'rendered') {
-        console.log("Plugin was rendered");
-      } else if (e.event == 'checkbox') {
-        var checkboxState = e.state;
-        console.log("Checkbox state: " + checkboxState);
-      } else if (e.event == 'not_you') {
-        console.log("User clicked 'not you'");
-      } else if (e.event == 'hidden') {
-        console.log("Plugin was hidden");
-      }
-      
     });
-	};
-	    (function(d, s, id){
-	     var js, fjs = d.getElementsByTagName(s)[0]; console.log("test");
+  }; 
+
+	 (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
 	     if (d.getElementById(id)) {return;}
 	     js = d.createElement(s); js.id = id;
 	     js.src = "https://connect.facebook.net/en_US/sdk.js";
 	     fjs.parentNode.insertBefore(js, fjs);
 	   }(document, 'script', 'facebook-jssdk'));
-</script>
-	<div class="fb-messenger-checkbox"  
-			  origin= "http://localhost"
-			  page_id= "https://www.facebook.com/Hanze-Groninger-Forum-Chatbot-130092244362504/"
-			  messenger_app_id= "288441184978256"
-			  user_ref="email_code"
-			  prechecked="true"
-			  allow_login="true"
-			  size="small">
-	</div>
 
+</script>
+<div class="fb-send-to-messenger" 
+  messenger_app_id="288441184978256" 
+  page_id="130092244362504" 
+  data-ref="1234" 
+  color="white" 
+  size="standard">
+</div>
 	<div class="chat-area">
 		<div class="popup-button">
 			<div class="popup-circ">
