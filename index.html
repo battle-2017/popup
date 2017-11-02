@@ -11,21 +11,47 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-	<div class="message">
-		<p>This is a message!</p>
-	</div>
-	<div id="image-body">
-		<!-- hier komt de afbeelding in -->	
-	</div>
-	<div class="popup-container">
-		<div class="popup-circ">
-			<p class="notNumber"></p>
-		</div>
-		<i class=""></i>
-	</div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : 'your-app-id',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 	<div class="chat-area">
-		
-	</div>
+		<div class="popup-button">
+			<div class="popup-circ">
+				<p class="notNumber"></p>
+			</div>
+			<i class=""></i>
+		</div>
+		<div class="popup-heading">
+			<p></p>
+		</div>
+		<div id="message" class="unread">
+			<div class="fb-messenger-checkbox"  
+			  origin=<PAGE_DOMAIN>
+			  page_id=<PAGE_ID>
+			  messenger_app_id=<APP_ID>
+			  user_ref="<UNIQUE_REF_PARAM>"
+			  prechecked="<true | false>
+			  allow_login="<true>"
+			  size="<small | medium | large | standard | xlarge>">
+			</div>
+		</div>	
+	</div>		
     <script src="js/app.js"></script>
 </body>
 
