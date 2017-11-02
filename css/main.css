@@ -145,3 +145,7 @@ input[type="submit"] {
 	line-height: 1em;
 	padding: 0;
 }
+
+.screenshot-bedankt {
+	background-image: url("popup/img/groninger-forum-bedankt.jpg");
+}
