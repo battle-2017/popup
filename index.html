@@ -14,22 +14,46 @@
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId            : 'your-app-id',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v2.10'
+      appId      : '288441184978256',
+      xfbml      : true,
+      version    : 'v2.6'
     });
-    FB.AppEvents.logPageView();
-  };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+    FB.Event.subscribe('messenger_checkbox', function(e) {
+      console.log("messenger_checkbox event");
+      console.log(e);
+      
+      if (e.event == 'rendered') {
+        console.log("Plugin was rendered");
+      } else if (e.event == 'checkbox') {
+        var checkboxState = e.state;
+        console.log("Checkbox state: " + checkboxState);
+      } else if (e.event == 'not_you') {
+        console.log("User clicked 'not you'");
+      } else if (e.event == 'hidden') {
+        console.log("Plugin was hidden");
+      }
+      
+    });
+	};
+	    (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0]; console.log("test");
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "https://connect.facebook.net/en_US/sdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
 </script>
+	<div class="fb-messenger-checkbox"  
+			  origin= ""
+			  page_id= "https://www.facebook.com/Hanze-Groninger-Forum-Chatbot-130092244362504/"
+			  messenger_app_id= "288441184978256"
+			  user_ref="email_code"
+			  prechecked="true"
+			  allow_login="true"
+			  size="small">
+	</div>
+
 	<div class="chat-area">
 		<div class="popup-button">
 			<div class="popup-circ">
@@ -41,18 +65,8 @@
 			<p>Imke:</p>
 		</div>
 		<div id="message" class="unred">
-			<div class="fb-messenger-checkbox"  
-			  origin=<PAGE_DOMAIN>
-			  page_id=<PAGE_ID>
-			  messenger_app_id=<APP_ID>
-			  user_ref="<UNIQUE_REF_PARAM>"
-			  prechecked="<true | false>
-			  allow_login="<true>"
-			  size="<small | medium | large | standard | xlarge>">
-			</div>
 		</div>	
 	</div>		
     <script src="js/app.js"></script>
 </body>
-
 </html> 
