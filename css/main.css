@@ -11,7 +11,7 @@ body{ box-sizing: border-box; }
 	width: 100vw;
 }
 .popup-button{
-	width: 55px;
+	width: 60px;
 	height: 55px;
 	position: absolute;
 	background: #ED009A;
@@ -39,14 +39,20 @@ body{ box-sizing: border-box; }
 	top: -10px;
 	right: -10px;
 }
+.popup-button img{
+	height: 44px;
+	width: auto;
+	margin: auto;
+	display: block;
+}
 .notNumber{
 	font-weight: 700;
 	color: #Ed009A;
 }
 .chat-area{
-	max-height: 350px;
+	max-height: 380px;
 	height: 0%;
-	width: 300px;
+	width: 350px;
 	position: fixed;
 	background: #eeeeee;
 	right: 0;
