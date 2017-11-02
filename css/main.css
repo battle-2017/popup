@@ -193,4 +193,13 @@ div.aanbod {
 	display: block;
 }
 
+a.button {
+	height: 50px;
+	width: 100px;
+	background-color: red;
 
+}
+
+#overzicht {
+	margin-left: 20%;
+}
