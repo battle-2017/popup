@@ -159,7 +159,7 @@ input[type="submit"] {
 	width: 80%;
 }
 
-div.screenshot-bedankt {
+div.bedankt {
 	/*background: url("../img/groninger-forum-bedankt.jpg") no-repeat fixed center;*/
 	Height: 100vh;
 	width: 100vw;
@@ -167,7 +167,7 @@ div.screenshot-bedankt {
 	display: block;
 }
 
-div.screenshot-aanbod {
+div.aanbod {
 	Height: 100vh;
 	width: 100vw;
 	background-size: cover;
