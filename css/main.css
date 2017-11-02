@@ -27,3 +27,11 @@ body{ box-sizing: border-box; }
 	top: -10px;
 	right: -10px;
 }
+.chat-area{
+	height: 350px;
+	width: 240px;
+	position: fixed;
+	background: blue;
+	right: 0;
+	bottom: 0;
+}

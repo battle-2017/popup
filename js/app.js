@@ -5,8 +5,8 @@ var msgInput = 0;
 detectMessage($); //detect that a message is there
 
 setNumber(msgInput);
-
 console.log(notNumber);
+chatBox();
 })(jQuery);
 
 function detectMessage($){
@@ -23,4 +23,9 @@ function setNumber(msgInput){
     notNumber.toString();
 
     $('.notNumber').text(notNumber);
+}
+function chatBox(){
+	$(".popup-container").click(function() {
+	  $( ".chat-area" ).css("display", "none");
+	});
 }
