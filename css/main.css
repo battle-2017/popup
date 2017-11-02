@@ -196,11 +196,12 @@ div.aanbod {
 a.button {
 	height: 50px;
 	width: 100px;
-	padding: 3em 5em;
+	padding: 2em 5em;
 	border: 2px black solid;
-
+	position: absolute;
+	width: 100%;
 }
 
 #overzicht {
-	margin-left: 20%;
+	top: 850px;
 }
