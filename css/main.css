@@ -196,7 +196,7 @@ div.aanbod {
 a.button {
 	height: 50px;
 	width: 100px;
-	padding: 2em;
+	padding: 2em 5em;
 	border: 2px black solid;
 
 }
