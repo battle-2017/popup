@@ -146,6 +146,11 @@ input[type="submit"] {
 	padding: 0;
 }
 
+
+div.main {
+	width: 80%;
+}
+
 div.screenshot-bedankt {
 	background: url("../img/groninger-forum-bedankt.jpg") no-repeat fixed center;
 	Height: 100vh;
