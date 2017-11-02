@@ -173,16 +173,20 @@ input[type="submit"] {
 	width: 80%;
 }
 
-div.screenshot-bedankt {
-	background: url("../img/groninger-forum-bedankt.jpg") no-repeat fixed center;
+div.bedankt {
 	Height: 100vh;
 	width: 100vw;
 	background-size: cover;
 	display: block;
 }
 
-div.screenshot-aanbod {
-	background: url("../img/groninger-forum-aanbod.jpg") no-repeat fixed center;
+img.screenshot-box {
+	width: 80%;
+	margin: auto;
+
+}
+
+div.aanbod {
 	Height: 100vh;
 	width: 100vw;
 	background-size: cover;
