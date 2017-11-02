@@ -12,7 +12,7 @@ chatBox($);
 
 function detectMessage($){
 	if($('.recieved').length > 0){
-		msgInput = 1;
+		msgInput = $('.recieved').length;
 	}
 }
 function setNumber(msgInput){
@@ -32,7 +32,7 @@ function chatBox($){
 	        position = 'down';
 
 	        setNumber(0);
-	        $(".poppu-circ").hide();
+	        $(".popup-circ").css("display", "none");
 	      }
 	      else {
 	        $('.chat-area').css({'height' : '0%'});
