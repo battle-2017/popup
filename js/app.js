@@ -5,7 +5,7 @@ var msgInput = 0;
 detectMessage($); //detect that a message is there
 
 setNumber(msgInput);
-console.log(notNumber);
+
 chatBox($);
 
 })(jQuery);
@@ -32,6 +32,7 @@ function chatBox($){
 	        position = 'down';
 
 	        setNumber(0);
+	        $(".poppu-circ").hide();
 	      }
 	      else {
 	        $('.chat-area').css({'height' : '0%'});

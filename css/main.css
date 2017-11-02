@@ -147,8 +147,9 @@ input[type="submit"] {
 }
 
 div.screenshot-bedankt {
-	background-image: url(img/groninger-forum-bedankt.jpg);
-	background-color: black;
-	height: 1000px;
-	width: 1000px;
+	background: url("img/groninger-forum-bedankt.jpg");
+	Height: 100vh;
+	width: 100vw;
+	background-size: cover;
+	display: block;
 }
