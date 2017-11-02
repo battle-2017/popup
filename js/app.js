@@ -17,11 +17,7 @@ function detectMessage($){
 }
 function setNumber(msgInput){
 	//check if the bot has send the message
-    if (msgInput == 1) {
-    	notNumber = 1;
-    }else{
-    	notNumber = 0;
-    }
+	notNumber = msgInput;
     // make it a string to display it
     notNumber.toString();
 
@@ -35,7 +31,7 @@ function chatBox($){
 	        $('.chat-area').css({'height' : '100%'});
 	        position = 'down';
 
-	        $("#message").removeClass("unred");
+	        setNumber(0);
 	      }
 	      else {
 	        $('.chat-area').css({'height' : '0%'});

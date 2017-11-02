@@ -57,4 +57,57 @@ body{ box-sizing: border-box; }
 	background: #eeeeee;
 	right: 0;
 	bottom: 0;
-} 
+
+	-webkit-transition: all 800ms ease-in-out;
+	-moz-transition: all 800ms ease-in-out;
+	-ms-transition: all 800ms ease-in-out;
+	-o-transition: all 800ms ease-in-out;
+	transition: all 800ms ease-in-out;
+}
+/* speech bubbles */
+.bubble {
+  position: relative;
+  padding: 0.8em;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 0.5em;
+  margin-left: 10%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  background: #ED009A;
+  color: white;
+}
+.bubble::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  border-top: 0.4em solid transparent;
+  border-bottom: 0.4em solid transparent;
+  border-left: 0.4em solid #ED009A;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 100%;
+}
+.bubble.recieved {
+  background: #f7f7f7;
+  color: #5D5D5D;
+  margin-left: 0;
+  margin-right: 10%;
+}
+.bubble.recieved::after {
+  left: auto;
+  right: 100%;
+  border: none;
+  border-top: 0.4em solid transparent;
+  border-bottom: 0.4em solid transparent;
+  border-right: 0.4em solid #EEEEEE;
+}
+.bubble p {
+  margin: 0;
+}
+.bubble .date {
+  opacity: 0.5;
+  font-size: 0.9em;
+  margin-top: 0.3em;
+}
+.chat-content{ padding: 0.8em; }
