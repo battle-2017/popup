@@ -202,6 +202,10 @@ a.button {
 	width: 100%;
 }
 
+.slider-page {
+    display: none;
+}
+
 #overzicht {
 	top: 930px;
 }
