@@ -34,9 +34,14 @@ function chatBox($){
 	        setNumber(0);
 	        $(".popup-circ").css("display", "none");
 	      }
-	      else {
+	});	  
+	$('.popup-heading a img').click(function () {  
+	      if (position == 'down') {
 	        $('.chat-area').css({'height' : '0%'});
-	        position = 'up';
+
+	        position = 'up';	      	
 	      }
+
 	});
 }
+
