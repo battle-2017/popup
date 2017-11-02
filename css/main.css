@@ -50,10 +50,12 @@ body{ box-sizing: border-box; }
 	color: #Ed009A;
 }
 .chat-area{
-	max-height: 380px;
+	max-height: 480px;
 	height: 0%;
 	width: 350px;
 	position: fixed;
+	flex-direction: column;
+	display: flex;
 	background: #eeeeee;
 	right: 0;
 	bottom: 0;
@@ -110,4 +112,36 @@ body{ box-sizing: border-box; }
   font-size: 0.9em;
   margin-top: 0.3em;
 }
-.chat-content{ padding: 0.8em; }
+.chat-content{ 
+	height: 100%;
+	padding: 0.8em;
+}
+
+form {
+	display: flex;
+	border-top: 0.2em solid #eee;
+	padding-bottom: 0.4em;
+	background: white;
+}
+
+input[type="text"] {
+	border: none;
+	width: 100%;
+	padding: 1.2em;
+	outline: none;
+	font-family: 'Open Sans';
+	font-size: 1em;
+	color: #5D5D5D;
+}
+
+input[type="submit"] {
+	cursor: pointer;
+	pointer-events: none;
+	border: none;
+	background: none;
+	color: #ED009A;
+	margin-right: 0.2em;
+	font-size: 2.5em;
+	line-height: 1em;
+	padding: 0;
+}
