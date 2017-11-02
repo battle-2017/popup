@@ -2,9 +2,11 @@ var notNumber = 0;
 var msgInput = 0;
 
 (function($) {
-detectMessage($);
+detectMessage($); //detect that a message is there
 
-console.log(msgInput);
+setNumber(msgInput);
+
+console.log(notNumber);
 })(jQuery);
 
 function detectMessage($){
@@ -13,9 +15,12 @@ function detectMessage($){
 	}
 }
 function setNumber(msgInput){
+	//check if the bot has send the message
     if (msgInput === 1) {
     	notNumber = 1;
-    } 
+    }
+    // make it a string to display it
     notNumber.toString();
-    $('popup-container::after').append(notNumber);
+
+    $('.notNumber').text(notNumber);
 }
